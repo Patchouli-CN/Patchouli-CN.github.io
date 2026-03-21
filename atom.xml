@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2026-02-07T15:01:18.866Z</updated>
+  <updated>2026-03-21T08:22:23.506Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打破 Python 异步文件 I/O 的天花板：我写了一个基于 Windows IOCP 的真异步库</title>
+    <link href="http://example.com/2026/03/21/aiowinfile/"/>
+    <id>http://example.com/2026/03/21/aiowinfile/</id>
+    <published>2026-03-21T08:13:00.000Z</published>
+    <updated>2026-03-21T08:22:23.506Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#前言&quot;&gt;&lt;/a&gt; 前言&lt;/h2&gt;
+&lt;p&gt;如果你在 Windows 上用 Python 写过异步文件操作，大概率用过 &lt;code&gt;aiofiles&lt;/code&gt;。但你可能不知道，&lt;strong&gt;aiofiles 并不是真正的异步 I/O&lt;/strong&gt;——它只是把阻塞的文件操作扔到了线程池里执行。这就像请了 10 个快递员，但每个快递员一次只能送一个包裹，高峰期照样排队。&lt;/p&gt;
+&lt;p&gt;直到最近，我决定解决这个问题。经过几周的开发，我完成了 &lt;code&gt;aiowinfile&lt;/code&gt;：&lt;strong&gt;一个基于 Windows IOCP（I/O Completion Port）的真正异步文件 I/O 库&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;测试数据很能说明问题：在 500 并发场景下，&lt;strong&gt;aiowinfile 的吞吐量是 aiofiles 的 2.27 倍，延迟降低了一半以上&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;今天这篇文章，我会从技术原理到实现细节，完整分享这个库的设计思路。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Python" scheme="http://example.com/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="http://example.com/tags/Python/"/>
+    
+    <category term="编程" scheme="http://example.com/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="asyncio" scheme="http://example.com/tags/asyncio/"/>
+    
+    <category term="文件IO" scheme="http://example.com/tags/%E6%96%87%E4%BB%B6IO/"/>
+    
+    <category term="IOCP" scheme="http://example.com/tags/IOCP/"/>
+    
+  </entry>
   
   <entry>
     <title>关于我</title>

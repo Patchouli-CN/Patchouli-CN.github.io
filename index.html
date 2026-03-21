@@ -99,25 +99,25 @@
                 &#xe62b;
             </div>
           <span class="main-nav-link">首页</span>
-        </span>
+        </a>
         <a class="main-nav-link-wrap" href="/archives">
             <div class="main-nav-icon icon rotate">
                 &#xe62b;
             </div>
           <span class="main-nav-link">归档</span>
-        </span>
+        </a>
         <a class="main-nav-link-wrap" href="/about">
             <div class="main-nav-icon icon rotate">
                 &#xe62b;
             </div>
           <span class="main-nav-link">关于</span>
-        </span>
+        </a>
         <a class="main-nav-link-wrap" href="/friend">
             <div class="main-nav-icon icon rotate">
                 &#xe62b;
             </div>
           <span class="main-nav-link">友链</span>
-        </span>
+        </a>
     <a id="main-nav-toggle" class="nav-icon" aria-label="Toggle navigation" role="button"></a>
   </nav>
   <nav id="sub-nav" aria-label="Secondary navigation">
@@ -152,15 +152,15 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">1</div>
+    <div class="sidebar-state-number">2</div>
   </div>
   <div class="sidebar-state-category">
     <div>分类</div>
-    <div class="sidebar-state-number">1</div>
+    <div class="sidebar-state-number">2</div>
   </div>
   <div class="sidebar-state-tag">
     <div>标签</div>
-    <div class="sidebar-state-number">4</div>
+    <div class="sidebar-state-number">9</div>
   </div>
 </div>
 <div class="sidebar-social" >
@@ -205,8 +205,31 @@
 
           <section id="main" aria-label="Main content">      <div class="post-wrapper">
   <div class="post-wrap left" data-aos="fade-up">
-      <a class="post-link" href="/2026/02/07/about-me/" aria-label="关于我" title="关于我"></a>
+      <a class="post-link" href="/2026/03/21/aiowinfile/" aria-label="打破 Python 异步文件 I/O 的天花板：我写了一个基于 Windows IOCP 的真异步库" title="打破 Python 异步文件 I/O 的天花板：我写了一个基于 Windows IOCP 的真异步库"></a>
     <div class="post-cover left">
+          <img data-src="https://d-sketon.top/img/_backwebp/bg1.webp" data-sizes="auto" alt="打破 Python 异步文件 I/O 的天花板：我写了一个基于 Windows IOCP 的真异步库" class="lazyload">
+    </div>
+    <div class="post-info">
+      <div class="post-meta">
+        <span><span class="icon-calendar"></span>2026-03-21</span>
+        <span><span class="icon-pencil"></span>2.3k 字</span>
+        <span><span class="icon-clock"></span>10 分钟</span>
+      </div>
+      <h2 class="post-title">打破 Python 异步文件 I/O 的天花板：我写了一个基于 Windows IOCP 的真异步库</h2>
+      <article class="post-article">
+           前言
+如果你在 Windows 上用 Python 写过异步文件操作，大概率用过 aiofiles。但你可能不知道，aiofiles 并不是真正的异步 I/O——它只是把阻塞的文件操作扔到了线程池里执行。这就像请了 10 个快递员，但每个快递员一次只能送一个包裹，高峰期照样排队。
+直到最近，我决定解决这个问题。经过几周的开发，我完成了 aiowinfile：一个基于 Windows IOCP（I/O Completion Port）的真正异步文件 I/O 库。
+测试数据很能说明问题：在 500 并发场景下，aiowinfile 的吞吐量是 aiofiles 的 2.27 倍，延迟降低了一半以上。
+今天这篇文章，我会从技术原理到实现细节，完整分享这个库的设计思路。
+      </article>
+    </div>
+  </div>
+</div>
+      <div class="post-wrapper">
+  <div class="post-wrap right" data-aos="fade-up">
+      <a class="post-link" href="/2026/02/07/about-me/" aria-label="关于我" title="关于我"></a>
+    <div class="post-cover right">
           <img data-src="https://d-sketon.top/img/_backwebp/bg1.webp" data-sizes="auto" alt="关于我" class="lazyload">
     </div>
     <div class="post-info">
@@ -260,10 +283,10 @@
       </div>
       <div>
         <span class="icon-brush"></span>
-        448
+        2.8k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
-        00:02
+        00:12
       </div>
       <div>
         <span class="icon-eye"></span>
@@ -291,15 +314,15 @@
 <div class="sidebar-state">
   <div class="sidebar-state-article">
     <div>文章</div>
-    <div class="sidebar-state-number">1</div>
+    <div class="sidebar-state-number">2</div>
   </div>
   <div class="sidebar-state-category">
     <div>分类</div>
-    <div class="sidebar-state-number">1</div>
+    <div class="sidebar-state-number">2</div>
   </div>
   <div class="sidebar-state-tag">
     <div>标签</div>
-    <div class="sidebar-state-number">4</div>
+    <div class="sidebar-state-number">9</div>
   </div>
 </div>
 <div class="sidebar-social" >
@@ -406,7 +429,7 @@
   \/_/ /_/   \/_____/   \/_/   \/_/  \/_/   \/_____/ 
                                                   
 `,'color: #ff5252;')
-    console.log('%c Theme.Reimu v' + '1.12.0' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
+    console.log('%c Theme.Reimu v' + '1.12.2' + ' %c https://github.com/D-Sketon/hexo-theme-reimu ', 'color: white; background: #ff5252; padding:5px 0;', 'padding:4px;border:1px solid #ff5252;')
   </script>
   
 
