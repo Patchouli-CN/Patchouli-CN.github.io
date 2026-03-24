@@ -205,22 +205,22 @@
 
           <section id="main" aria-label="Main content">      <div class="post-wrapper">
   <div class="post-wrap left" data-aos="fade-up">
-      <a class="post-link" href="/2026/03/21/aiowinfile/" aria-label="打破 Python 异步文件 I/O 的天花板：我写了一个基于 Windows IOCP 的真异步库" title="打破 Python 异步文件 I/O 的天花板：我写了一个基于 Windows IOCP 的真异步库"></a>
+      <a class="post-link" href="/2026/03/21/ayafileio/" aria-label="打破 Python 异步文件 I/O 的天花板：我写了一个基于 Windows IOCP 的真异步库" title="打破 Python 异步文件 I/O 的天花板：我写了一个基于 Windows IOCP 的真异步库"></a>
     <div class="post-cover left">
           <img data-src="https://d-sketon.top/img/_backwebp/bg1.webp" data-sizes="auto" alt="打破 Python 异步文件 I/O 的天花板：我写了一个基于 Windows IOCP 的真异步库" class="lazyload">
     </div>
     <div class="post-info">
       <div class="post-meta">
         <span><span class="icon-calendar"></span>2026-03-21</span>
-        <span><span class="icon-pencil"></span>2.3k 字</span>
+        <span><span class="icon-pencil"></span>2.4k 字</span>
         <span><span class="icon-clock"></span>10 分钟</span>
       </div>
       <h2 class="post-title">打破 Python 异步文件 I/O 的天花板：我写了一个基于 Windows IOCP 的真异步库</h2>
       <article class="post-article">
            前言
 如果你在 Windows 上用 Python 写过异步文件操作，大概率用过 aiofiles。但你可能不知道，aiofiles 并不是真正的异步 I/O——它只是把阻塞的文件操作扔到了线程池里执行。这就像请了 10 个快递员，但每个快递员一次只能送一个包裹，高峰期照样排队。
-直到最近，我决定解决这个问题。经过几周的开发，我完成了 aiowinfile：一个基于 Windows IOCP（I/O Completion Port）的真正异步文件 I/O 库。
-测试数据很能说明问题：在 500 并发场景下，aiowinfile 的吞吐量是 aiofiles 的 2.27 倍，延迟降低了一半以上。
+直到最近，我决定解决这个问题。经过几周的开发，我完成了 ayafileio：一个基于 Windows IOCP（I/O Completion Port）的真正异步文件 I/O 库。
+测试数据很能说明问题：在高并发场景下，ayafileio 的延迟稳定性远超 aiofiles，P99 延迟降低 90% 以上，且吞吐量不会随并发增加而崩溃。
 今天这篇文章，我会从技术原理到实现细节，完整分享这个库的设计思路。
       </article>
     </div>
@@ -283,7 +283,7 @@
       </div>
       <div>
         <span class="icon-brush"></span>
-        2.8k
+        2.9k
         &nbsp;|&nbsp;
         <span class="icon-coffee"></span>
         00:12
